@@ -5,12 +5,13 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword }
 
 // Konfigurasi dari Firebase Project
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_MSG_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAkp8I198vuqDcENx81rguJZyPtUtlzoG0",
+  authDomain: "globalprimaniaga-login.firebaseapp.com",
+  projectId: "globalprimaniaga-login",
+  storageBucket: "globalprimaniaga-login.firebasestorage.app",
+  messagingSenderId: "1039305855159",
+  appId: "1:1039305855159:web:df717796a3d46879e0bd32",
+  measurementId: "G-8TZVJ7RXBQ"
 };
 
 // Inisialisasi Firebase
