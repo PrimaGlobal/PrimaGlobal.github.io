@@ -19,9 +19,9 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Login
-document.getElementById("login").addEventListener("click", async () => {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+document.getElementById("login").addEventListener("click", () => {
+  console.log("Tombol login diklik");
+});
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
