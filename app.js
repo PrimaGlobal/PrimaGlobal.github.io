@@ -19,6 +19,14 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Login
-document.getElementById("login").addEventListener("click", () => {
-  console.log("Tombol login diklik");
+document.getElementById("login").addEventListener("click", async () => {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    window.location.href = "dashboard.html"; // Redirect setelah login berhasil
+  } catch (err) {
+    document.getElementById("status").innerText = "Login gagal: " + err.message;
+  }
 });
