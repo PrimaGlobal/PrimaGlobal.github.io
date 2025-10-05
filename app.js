@@ -22,4 +22,3 @@ const auth = getAuth(app);
 document.getElementById("login").addEventListener("click", () => {
   console.log("Tombol login diklik");
 });
-});
