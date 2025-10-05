@@ -22,11 +22,4 @@ const auth = getAuth(app);
 document.getElementById("login").addEventListener("click", () => {
   console.log("Tombol login diklik");
 });
-
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-    window.location.href = "dashboard.html"; // Redirect setelah login berhasil
-  } catch (err) {
-    document.getElementById("status").innerText = "Login gagal: " + err.message;
-  }
 });
