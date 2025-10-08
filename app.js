@@ -1,7 +1,8 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { 
+  initializeApp,
   getAuth, 
-  signInWithEmailAndPassword 
+  signInWithEmailAndPassword,
+  signOut
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 // Ganti dengan konfigurasi Firebase punyamu
@@ -14,6 +15,18 @@ const firebaseConfig = {
   appId: "1:1039305855159:web:df717796a3d46879e0bd32",
   measurementId: "G-8TZVJ7RXBQ"
 };
+
+try {
+  await signInWithEmailAndPassword(auth, email, password);
+
+  // Simpan waktu login di localStorage
+  localStorage.setItem("loginTime", Date.now());
+
+  // Redirect ke dashboard
+  window.location.href = "dashboard.html";
+} catch (err) {
+  document.getElementById("status").innerText = "Login gagal: " + err.message;
+}
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
